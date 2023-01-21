@@ -1,0 +1,3 @@
+在https://icons.bootcss.com/中为icon图标库
+在<head></head>中输入<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">使用
+每个头栏都要加
