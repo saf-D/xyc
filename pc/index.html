@@ -20,7 +20,45 @@
 
     
 
-    <style> * {margin: 0;padding: 0;font-family: sans-serif;}  .head_box {min-width: 1350px;height: 620px;background-image: linear-gradient(to right, #9c94ff, #2e3ad7);}  .main_box {width: 1200px;margin: auto;}  .head {padding-top: 30px;}  .head h2 {float: left;color: #fff;font-weight: 100;letter-spacing: 2px;}  .head ul {float: right;margin-right: 50px;margin-top: 5px;}  .head ul li {list-style: none;float: left;font-size: 18px;margin-left: 30px;}  .head ul li a {text-decoration: none;color: #fff;padding-bottom: 10px;padding-left: 5px;padding-right: 5px;}  .head ul li a:hover {border-bottom: 1px solid #fff;}  .a {height: 500px;margin-top: 60px;}  .a .left {float: left;width: 50%;height: 100%;}  .a .right {float: right;width: 50%;height: 100%;text-align: center;}  .a .left h2 {color: #fff;font-size: 36px;margin-top: 120px;margin-bottom: 10px;}  .a .left h1 {color: #fff;font-size: 50px;}  .a .left .download {margin-top: 50px;}  .a .left .download .down {float: left;text-decoration: none;width: 160px;height: 40px;border: 2px solid #fff;text-align: center;line-height: 40px;border-radius: 8px;}  .a .left .download .app {color: #6a60f3;background-color: #fff;}  .a .left .download .web {color: #fff;margin-left: 10px;}  .a .left .download .app:hover {background-color: #b1acff;color: #fff;}  .a .left .download .web:hover {background-color: #b1acff;color: #fff;}  .a .right img {width: 240px;margin-top: 20px;margin-left: 20px;}  .b {text-align: center;margin-top: 65px;background-color: #fff;}  .b h1 {color: #555;font-size:40px;}  .b em {display: inline-block;width: 42px;height: 1px;background-color: #6a60f3;margin-top: 10px;}  .b p {color: #666;margin-top: 10px;}  .b .con {height: 400px;}  .b .con div {float: left;height: 100%;width: 25%;}  .b .con img {width: 100px;height: 100px;margin-top: 80px;}  .b .con h2 {margin-top: 25px;font-weight: normal;}  .b .con p {font-size: 14px;padding: 0 15px;}  .c {background-color: #6a60f3;height: 720px;min-width: 1350px;}  .c img {float: left;width: 40%;margin-top: 90px;}  .c .cons {width: 50%;color: #fff;float: right;margin-top: 150px;}  .c .cons h1 {font-size: 50px;font-weight: normal;}  .c .cons h4 {margin-top: 50px;font-weight: normal;}  .c .cons .tp {margin-top: 40px;width: 100%;height: 120px;}  .c .cons .tpcon {float: left;width: 140px;height: 120px;text-align: center;}  .c .cons .tpcon img {margin: 0;float: none;width: 60px;}  .c .cons .tpcon p {margin-top: 10px;font-size: 18px;}  .d {text-align: center;margin-top: 50px;background-color: #fff;}  .d em {display: inline-block;width: 42px;height: 1px;background-color: #6a60f3;margin-top: 10px;}  .d img {margin-top: 50px;width: 90%;}  .bottom {padding-top: 50px;min-width: 1350px;height: 230px;background-color: #333;margin-top: 120px;}  .bottom .box {float: left;width: 20%;}  .bottom .box p {color: #f0f0f0;margin: 20px 20px 10px 20px;}  .bottom .box .jiaru {float: left;text-decoration: none;width: 120px;height: 30px;border: 2px solid #fff;text-align: center;line-height: 30px;border-radius: 3px;color: #fff;margin-left: 20px;}  .bottom .box ul li {list-style: none;line-height: 20px;margin-left: 20px;}  .bottom .box ul li a {text-decoration: none;color: #a8a8a8;font-size: 13px;} </style>
+    <style>
+        .container{
+    margin:50px 0 0 50px;
+}
+.icon-delete{
+    display:inline-block;
+    width:32px;height:32px;
+    background:url(./imgs/icon-delete.png) no-repeat center;
+}
+.icon:before,.icon:after{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    visibility: hidden;
+}
+.icon:hover:before,.icon:hover:after{
+    transition:visibility .1s .1s;
+    visibility: visible;
+}
+.icon:after{
+    content:"";
+    border:8px solid transparent;
+    border-top-color:#000;
+    top:-10px;
+}
+.icon:before{
+    content:attr(data-title);
+    background-color:#000;
+    color:#fff;
+    padding:5px 10px;
+    white-space: nowrap;
+    top:-40px;
+}
+.icon{
+    position:relative;
+}
+
+        
+        * {margin: 0;padding: 0;font-family: sans-serif;}  .head_box {min-width: 1350px;height: 620px;background-image: linear-gradient(to right, #9c94ff, #2e3ad7);}  .main_box {width: 1200px;margin: auto;}  .head {padding-top: 30px;}  .head h2 {float: left;color: #fff;font-weight: 100;letter-spacing: 2px;}  .head ul {float: right;margin-right: 50px;margin-top: 5px;}  .head ul li {list-style: none;float: left;font-size: 18px;margin-left: 30px;}  .head ul li a {text-decoration: none;color: #fff;padding-bottom: 10px;padding-left: 5px;padding-right: 5px;}  .head ul li a:hover {border-bottom: 1px solid #fff;}  .a {height: 500px;margin-top: 60px;}  .a .left {float: left;width: 50%;height: 100%;}  .a .right {float: right;width: 50%;height: 100%;text-align: center;}  .a .left h2 {color: #fff;font-size: 36px;margin-top: 120px;margin-bottom: 10px;}  .a .left h1 {color: #fff;font-size: 50px;}  .a .left .download {margin-top: 50px;}  .a .left .download .down {float: left;text-decoration: none;width: 160px;height: 40px;border: 2px solid #fff;text-align: center;line-height: 40px;border-radius: 8px;}  .a .left .download .app {color: #6a60f3;background-color: #fff;}  .a .left .download .web {color: #fff;margin-left: 10px;}  .a .left .download .app:hover {background-color: #b1acff;color: #fff;}  .a .left .download .web:hover {background-color: #b1acff;color: #fff;}  .a .right img {width: 240px;margin-top: 20px;margin-left: 20px;}  .b {text-align: center;margin-top: 65px;background-color: #fff;}  .b h1 {color: #555;font-size:40px;}  .b em {display: inline-block;width: 42px;height: 1px;background-color: #6a60f3;margin-top: 10px;}  .b p {color: #666;margin-top: 10px;}  .b .con {height: 400px;}  .b .con div {float: left;height: 100%;width: 25%;}  .b .con img {width: 100px;height: 100px;margin-top: 80px;}  .b .con h2 {margin-top: 25px;font-weight: normal;}  .b .con p {font-size: 14px;padding: 0 15px;}  .c {background-color: #6a60f3;height: 720px;min-width: 1350px;}  .c img {float: left;width: 40%;margin-top: 90px;}  .c .cons {width: 50%;color: #fff;float: right;margin-top: 150px;}  .c .cons h1 {font-size: 50px;font-weight: normal;}  .c .cons h4 {margin-top: 50px;font-weight: normal;}  .c .cons .tp {margin-top: 40px;width: 100%;height: 120px;}  .c .cons .tpcon {float: left;width: 140px;height: 120px;text-align: center;}  .c .cons .tpcon img {margin: 0;float: none;width: 60px;}  .c .cons .tpcon p {margin-top: 10px;font-size: 18px;}  .d {text-align: center;margin-top: 50px;background-color: #fff;}  .d em {display: inline-block;width: 42px;height: 1px;background-color: #6a60f3;margin-top: 10px;}  .d img {margin-top: 50px;width: 90%;}  .bottom {padding-top: 50px;min-width: 1350px;height: 230px;background-color: #333;margin-top: 120px;}  .bottom .box {float: left;width: 20%;}  .bottom .box p {color: #f0f0f0;margin: 20px 20px 10px 20px;}  .bottom .box .jiaru {float: left;text-decoration: none;width: 120px;height: 30px;border: 2px solid #fff;text-align: center;line-height: 30px;border-radius: 3px;color: #fff;margin-left: 20px;}  .bottom .box ul li {list-style: none;line-height: 20px;margin-left: 20px;}  .bottom .box ul li a {text-decoration: none;color: #a8a8a8;font-size: 13px;} </style>
     <!--END-->
 </head>
 <!--
@@ -157,7 +195,9 @@
             <div class="layui-col-sm4">
                 <div class="pricing">
                     <div class="price-title">纯净生存</div>
-                        <div class="price"><span class="small">JAVA版</span>1.7.1-1.19.3<span style="font-size: 16px"></span> <i lay-tips="限时免费" class="layui-icon layui-icon-tips" style="margin-bottom: 6px;">1</i>
+                        <div class="price"><span class="small">JAVA版</span>1.7.1-1.19.3<span style="font-size: 16px"></span> <div class="container">
+    <span class="icon icon-delete" data-title="删除"></span>
+<i lay-tips="限时免费" class="layui-icon layui-icon-tips" style="margin-bottom: 6px;"></i></div>
                     </div>
                     <div class="desc">插件服</div>
                     <ul class="price-content">
