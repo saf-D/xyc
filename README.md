@@ -1,4 +1,7 @@
-1. **浏览人数**
-[![Page Views Count](https://badges.toozhao.com/badges/01GS1KTCXX78TSNJXY8GH91MSF/green.svg)](https://badges.toozhao.com/stats/01GS1KTCXX78TSNJXY8GH91MSF "Get your own page views count badge on badges.toozhao.com")
-2. **我们的网站**
-[![WEBSITE](https://camo.githubusercontent.com/5a9a167fb249bae49c2c31e7368d8b70db7f109613e33ec22b47f3728b0140c4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f576562736974652d3744393239453f7374796c653d666f722d7468652d6261646765266c6f676f436f6c6f723d7768697465266c6f676f3d417061636865436f7563684442)](https://xyc.netlify.app/)
+### 我的世界星雨城服务器 😎
+#### Minecraft Server - Star Rain City
+
+#### 我们的服务器官网
+1. https://xyc.0oo0.top/        [可能有时会卡]
+2. https://xyc.pages.dev/       [经常被攻击]
+3. https://xyc.netlify.app/     [经常很卡]
