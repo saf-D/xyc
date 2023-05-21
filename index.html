@@ -396,7 +396,7 @@
                 <div class="layui-col-sm4">
                     <div class="pricing">
                         <div class="price-title">服务器</div>
-                        <div class="price"><span class="small">JAVA版</span>版本号不详<span style="font-size: 16px">
+                        <div class="price"><span class="small">JAVA版</span>1.8.9 ~ 1.19.4<span style="font-size: 16px">
                             </span> <i lay-tips="114514" class="layui-icon layui-icon-tips"
                                 style="margin-bottom: 6px;"></i>
                         </div>
@@ -860,5 +860,58 @@
         }
     }
 </script>
+<script>window.onload = function () {
+        let medusa = document.createElement('div');
+        medusa.setAttribute('class', 'medusa');
+        medusa.innerHTML = '' +
+            '<div><a onclick="goTop()" title="Top"><img class="pass" src="./img/top.png"></a></div>' +
+            '<div><a href="http://www.github.com/saf-D/xyc/" title="Github" target="_blank"><img class="pass" src="./img/github.png"></a></div>' +
+            '<div><a href="./issues.html/" title="反馈" target="_blank"><img class="pass" src="./img/msg.png"></a></div>';
+        document.body.appendChild(medusa);
+    }
+    
+    function CheckImgExists(url) {
+        let ImgObj = new Image();
+        ImgObj.src = url;
+        return ImgObj.width > 0;
+    }
+    
+    function goTop() {
+        let scrollToTop = setInterval(function () {
+            let pos = window.pageYOffset;
+            if (pos > 0) {
+                window.scrollTo(0, pos - 20);
+            } else {
+                window.clearInterval(scrollToTop);
+            }
+        }, 10);
+    }</script>
+    <style>
+        .medusa {
+    position: fixed;
+    right: 1%;
+    bottom: 5%;
+    width: 50px;
+    border: 1px solid #cdcccc;
+    background-color: white;
+    font-size: 20px;
+    z-index: 1040;
+    -webkit-backface-visibility: hidden;
+}
 
+.medusa > div > a > img {
+    width: 30px;
+    height: 30px;
+}
+
+.medusa > div {
+    margin: 5px 0 5px 9px;
+}
+
+.medusa > div > a {
+    padding: 0 0 7px 0;
+}
+
+
+    </style>
 </html>
