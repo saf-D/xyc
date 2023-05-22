@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-hans" title="Coding design">
+<head>
+    <link rel="shortcut icon" href="../img/SRC.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MC星雨城-下载</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url(images/05.png) center / cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main.table {
+            width: 77vw;
+            height: 80vh;
+            background-color: #fff5;
+            box-shadow: 0 8px 16px #0005;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .header {
+            width: 100%;
+            height: 10%;
+            background-color: #fff4;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .input-group {
+            width: 35%;
+            height: 50%;
+            background-color: #fff5;
+            padding: 0 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .2s;
+        }
+
+        .header .input-group:hover {
+            width: 45%;
+            background-color: #fff8;
+            box-shadow: 0 5px 40px #0002;
+        }
+
+        .header .input-group img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .header .input-group input {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+
+        .shell {
+            width: 95%;
+            max-height: calc(90% - 25px);
+            background-color: #fffb;
+            margin: 8px auto;
+            border-radius: 10px;
+            overflow: auto;
+            overflow: overlay;
+        }
+
+        .shell::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td img {
+            width: 36px;
+            height: 36px;
+            margin-right: 10px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+            padding: 20px;
+            text-align: left;
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #d5d1defe;
+            cursor: pointer;
+        }
+
+        /* 偶数行背景色 */
+        tbody tr:nth-child(even) {
+            background-color: #0000000b;
+        }
+
+        tbody tr:hover {
+            background-color: #fff6 !important;
+        }
+
+        .button {
+            padding: 5px 0;
+            border-radius: 40px;
+            text-align: center;
+        }
+
+        tr:nth-child(4n) .button {
+            background-color: #86e49d;
+            color: #006b21;
+        }
+
+        tr:nth-child(4n-1) .button {
+            background-color: #ebc474;
+        }
+
+        tr:nth-child(4n+1) .button {
+            background-color: #d893a3;
+            color: #b30021;
+        }
+
+        tr:nth-child(4n+2) .button {
+            background-color: #6fcaea;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="table">
+        <section class="header">
+            <h1>下载列表</h1>
+            <b>自认为好用的几个: <a href="#000">001</a>, <a href="#001">002</a>, <a href="#003">004</a>, <a href="#004">005</a>, <a href="#028">029</a>, <a href="#029">030</a></b>
+            <div class="input-group">
+                <input type="search" placeholder="请在键盘上按下ctrl+f进行浏览器自带搜索...">
+                <img src="images/search.png">
+            </div>
+        </section>
+        <section class="shell">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Id🌙 </th>
+                        <th> Name💗</th>
+                        <th> Profile💞</th> 
+                        <th> Author💌</th>
+                        <th> Link🥰</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <div id="000"><tr style="white-space: nowrap;">&nbsp;Hello! <a href="..">返回首页! </a>本页面是用来展示市面上站长所知的所有启动器, 好用不好用我不知道<b>但自认为真的很好用的几个: <a href="#000">001</a>, <a href="#001">002</a>, <a href="#003">004</a>, <a href="#004">005</a>, <a href="#028">029</a>, <a href="#029">030</a></b></tr></div>
+                    <tr>
+                        <td id="001"> 001 </td>
+                        <td> <img src="images/img/1.png">Minecraft官方启动器</td>
+                        <td> 应该比较好用的官方启动器 (正版账号请在微软应用商店购买, 官网锁区) </td>
+                        <td> MINECRAFT官网: MOJANG </td>
+                        <td>
+                            <a href="https://launcher.mojang.com/download/MinecraftInstaller.exe/"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="002"> 002</td>
+                        <td><img src="images/img/2.png"> HMCL </td>
+                        <td> 非常实用的启动器 </td>
+                        <td> JENKINS: BANGBANG93 </td>
+                        <td>
+                            <a href="https://hmcl.huangyuhui.net/"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="003"> 003 </td>
+                        <td><img src="images/img/3.jpg"> 网易Minecraft启动器 </td>
+                        <td> 无话可说的启动器 </td>
+                        <td> 网易MC官网: 网易 </td>
+                        <td>
+                            <a href="https://mc.163.com/"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="004"> 004</td>
+                        <td><img src="images/img/4.jpg"> BakaXL </td>
+                        <td> 新一代MINECRAFT崩坏启动器 </td>
+                        <td> BAKAXL官网: TT702 </td>
+                        <td>
+                            <a href="https://www.bakaxl.com/"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="005"> 005</td>
+                        <td><img src="images/img/5.jpg"> 快吧我的世界盒子</td>
+                        <td> 类似于多玩我的世界盒子的启动器 </td>
+                        <td> ZOL: 快吧 </td>
+                        <td>
+                            <a href="#"><p class="button">NO! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="006"> 006</td>
+                        <td><img src="images/img/6.jpg"> PCL启动器 </td>
+                        <td> 站长觉得最好的启动器 </td>
+                        <td> 百度网盘: 龙腾猫跃 </td>
+                        <td>
+                            <a href="https://afdian.net/p/0164034c016c11ebafcb52540025c377"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="007"> 007</td>
+                        <td><img src="images/img/7.jpg"> 多玩我的世界盒子 </td>
+                        <td> 去世的启动器 </td>
+                        <td> 多玩官网: 多玩 </td>
+                        <td>
+                            <a href="#"><p class="button">NO! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="008"> 008</td>
+                        <td><img src="images/img/8.jpg"> MCCL启动器 </td>
+                        <td> 弃坑的启动器 (虽然弃坑了但是还很实用) </td>
+                        <td> 百度网盘 (密码cblm) </td>
+                        <td>
+                            <a href="https://pan.baidu.com/s/1qZOGmQR6xihaLPHksptIIg"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="009"> 009</td>
+                        <td><img src="images/img/9.jpg"> 麦块我的世界盒子 </td>
+                        <td> 专注于服务器的启动器 </td>
+                        <td> 麦块官网: 麦块 </td>
+                        <td>
+                            <a href="#"><p class="button">NO! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="010"> 010</td>
+                        <td><img src="images/img/10.jpg"> 我的世界启动侠 </td>
+                        <td> 精简小巧的启动器 </td>
+                        <td> 启动侠官网: 路由侠 </td>
+                        <td>
+                            <a href="http://dl.qidongxia.com/mclc.zip"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="011"> 011</td>
+                        <td><img src="images/img/12.jpg"> 我的世界联机侠 </td>
+                        <td> 建个服务器还贼麻烦的启动器 </td>
+                        <td> PC6: 路由侠 </td>
+                        <td>
+                            <a href="#"><p class="button">NO! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="012"> 012</td>
+                        <td><img src="images/img/12.jpg"> MultiMC启动器 </td>
+                        <td> 据说比正版启动器还强大一百倍的启动器 </td>
+                        <td> MULTIMC官网: MULTIMC </td>
+                        <td>
+                            <a href="#"><p class="button">NO! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="013"> 013</td>
+                        <td><img src="images/img/13.jpg"> 我的世界精灵 </td>
+                        <td> 去世的启动器 </td>
+                        <td> ZOL: 我的世界精灵 </td>
+                        <td>
+                            <a href="#"><p class="button">NO! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="014"> 014</td>
+                        <td><img src="images/img/14.jpg"> 忘却的旋律启动器 </td>
+                        <td> 老牌启动器 </td>
+                        <td> 121下载站: 忘却的旋律 </td>
+                        <td>
+                            <a href="http://down2.121down.com:8181/soft/wdsjwqdxlqdq.zip"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="015"> 015</td>
+                        <td><img src="images/img/15.jpg"> BMCL </td>
+                        <td> HMCL的作者的另外一款启动器 </td>
+                        <td> BANGBANG93官网: BANGBANG93 </td>
+                        <td>
+                            <a href="https://www.bangbang93.com/assets/uploads/files/1540902187827-bmclng.exe"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="016"> 016</td>
+                        <td><img src="images/img/16.png"> MCLuncherBN </td>
+                        <td> 更趋于正版启动器的启动器 (警告：千万别点更新, 不然你的MCLUNCHERBN就被直接强制升级成精灵了, 精灵已经废了) </td>
+                        <td> 百度网盘: ZHH0000ZHH </td>
+                        <td>
+                            <a href="https://pan.baidu.com/s/1i5k7v17"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="017"> 017</td>
+                        <td><img src="images/img/17.jpg"> MMCL </td>
+                        <td> 由MCMNY制作的启动器 </td>
+                        <td> 百度网盘: MCMNY </td>
+                        <td>
+                            <a href="https://pan.baidu.com/s/1dENeMzB"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="018"> 018</td>
+                        <td><img src="images/img/18.jpg"> TMCL </td>
+                        <td> 由TIAN051011制作的启动器 </td>
+                        <td> 百度网盘 (密码aid1): TIAN051011 </td>
+                        <td>
+                            <a href="https://pan.baidu.com/s/1jIhkfhO"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="019"> 019</td>
+                        <td><img src="images/img/19.jpg"> Nsiso启动器 </td>
+                        <td> 由NSISOGF制作的启动器 </td>
+                        <td> 百度网盘 (密码jedk): NSISOGF </td>
+                        <td>
+                            <a href="https://eyun.baidu.com/s/3ggMUxEV"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="020"> 020</td>
+                        <td><img src="images/img/20.jpg"> Akkariin启动器 </td>
+                        <td> 由AKKARIIN制作的启动器 </td>
+                        <td> 百度网盘 (密码bmpn): AKKARIIN </td>
+                        <td>
+                            <a href="https://pan.baidu.com/s/1j7BMVopwJviZqWa76Nz0GA"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="021"> 021</td>
+                        <td><img src="images/img/21.jpg"> YMC-Lond启动器 </td>
+                        <td> 由JJYYH制作的启动器 </td>
+                        <td> 蓝奏云: 蓝奏云 </td>
+                        <td>
+                            <a href="https://www.lanzoub.com/i1o5e9i"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="022"> 022</td>
+                        <td><img src="images/img/22.jpg"> CityWorld启动器 </td>
+                        <td> 由南街.制作的启动器 </td>
+                        <td> 百度网盘: 南街. </td>
+                        <td>
+                            <a href="#"><p class="button">NO! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="023"> 023</td>
+                        <td><img src="images/img/23.jpg"> BeeLauncher </td>
+                        <td> 由160831699制作的启动器 </td>
+                        <td> 百度网盘: 160831699 </td>
+                        <td>
+                            <a href="https://pan.baidu.com/s/1jHOXD0U"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="024"> 024</td>
+                        <td><img src="images/img/24.jpg"> CMCL </td>
+                        <td> 由MAX_小葵制作的启动器 </td>
+                        <td> 百度网盘: MAX_小葵 </td>
+                        <td>
+                            <a href="#"><p class="button">NO! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="025"> 025</td>
+                        <td><img src="images/img/25.jpg"> GBCL </td>
+                        <td> 由GOOSE_BOMB制作的启动器 </td>
+                        <td> GitHub: GOOSE_BOMB </td>
+                        <td>
+                            <a href="#"><p class="button">NO! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="026"> 026</td>
+                        <td><img src="images/img/26.jpg"> MTMCL </td>
+                        <td> 由LIN212制作的启动器 </td>
+                        <td> GitHub: LIN212 </td>
+                        <td>
+                            <a href="#"><p class="button">NO! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="027"> 027</td>
+                        <td><img src="https://hml.hzpmc.top/1.ico"> HML </td>
+                        <td> HZP Minecraft Launcher </td>
+                        <td> HML官网: 创方</td>
+                        <td>
+                            <a href="https://hml.hzpmc.top/"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="028"> 028</td>
+                        <td><img src="https://steve-xmh.github.io/scl/assets/favicon.ico"> Sharp Craft Launcher </td>
+                        <td> Sharp Craft Launcher </td>
+                        <td> SCL官网: steve-xmh </td>
+                        <td>
+                            <a href="https://steve-xmh.github.io/scl/"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="029"> 029</td>
+                        <td><img src="https://www.lunarclient.com/assets/img/apple-touch-icon-60x60.png"> LUNAR CLIENT </td>
+                        <td> 中文名月亮端, PVP最佳启动器之一, A modpack for all modern versions of Minecraft! </td>
+                        <td> LUNAR CLIENT官网: Moonsworth </td>
+                        <td>
+                            <a href="https://www.lunarclient.com/"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="030"> 030</td>
+                        <td><img src="https://assets.badlion.net/site/favicon.webp"> BADLION </td>
+                        <td> 中文名狮子端, PVP最佳启动器之一, THE MOST COMPLETE ALL-IN-ONE MOD LIBRARY FOR MINECRAFT! </td>
+                        <td> BADLION官网: ESL Gaming Online </td>
+                        <td>
+                            <a href="https://www.badlion.net/"><p class="button">Go! </p></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
